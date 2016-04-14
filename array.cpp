@@ -1,7 +1,3 @@
-// masiv.cpp: определяет точку входа для консольного приложения.
-//В двумерном массиве произвольных чисел размером (N,M), 
-// переставить строки так, чтобы суммы их элементов возрастали.
-
 #include <iostream>
 int main(int argc, char* argv[])
 {
@@ -13,19 +9,19 @@ int main(int argc, char* argv[])
 	{
 		for (int j = 0; j < M; j++)
 		{
-			array[i][j] = 1 + rand() % 10; // случайные цисла в диапозоне от 1 до 10
-		std::cout << array[i][j]<<std::endl; // контрольный вывод массива
-		} // for j
+			array[i][j] = 1 + rand() % 10;
+		std::cout << array[i][j]<<std::endl;
+        		}
 		std::cout<<std::endl;
 	}
-	int sumelement[N]; // для хранения суммы элементов
+	int sumelement[N];
 	int d = 0;
 	std::cout<< "Суммы элементов в строках" <<std::endl;
-	for (int k = 0; k < N; k++)   // строки
-	{
+	for (int k = 0; k < N; k++)
+    	{
 		sumelement[k] = 0;
 		for (int m = 0; m < M; m++) 
-		{
+		{   
 			sumelement[d] += array[k][m];
 		};
 		std::cout<< sumelement[d]<<std::endl;
@@ -54,16 +50,16 @@ int main(int argc, char* argv[])
 	{
 		for (int j = 0; j < M; j++)
 		{
-			std::cout<< array[i][j]<<std::endl; // вывод массива
+			std::cout<< array[i][j]<<std::endl;
 		}
 		std::cout << std::endl;
 	}
 	d = 0;
 	std::cout << "Суммы элементов в строках в итоговом массиве" << std::endl;
-	for (int k = 0; k < N; k++)   // строки
+	for (int k = 0; k < N; k++)
 	{
 		sumelement[k] = 0;
-		for (int m = 0; m < M; m++)  // стольбцы
+		for (int m = 0; m < M; m++)
 		{
 			sumelement[d] += array[k][m];
 		};
